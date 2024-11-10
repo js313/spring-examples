@@ -13,8 +13,8 @@ public class Example8 {
         vehicle.setVehicleStarted(true);
 
         VehicleService vehicleService = vehicle.getVehicleService();
-        vehicleService.playMusic("Swalla", false);
-        vehicleService.moveVehicle(true);
-        vehicleService.stopVehicle(true);
+        vehicleService.playMusic("Anyone", vehicle.isVehicleStarted());
+        vehicleService.moveVehicle(vehicle.isVehicleStarted());
+        vehicleService.stopVehicle(vehicle.isVehicleStarted());
     }
 }
